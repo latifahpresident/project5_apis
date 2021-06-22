@@ -27,7 +27,7 @@ public class ServiceCommunicator {
             }
     }
 /*
- get() - read the reply from the webserver specifed in the constructor.
+ get() - read the reply from the webserver specified in the constructor.
         returns a string that captured the output from that service.
  */
     public String get() {
@@ -50,7 +50,7 @@ public class ServiceCommunicator {
  */
       public static void main(String[] argv) {
         System.out.println(new ServiceCommunicator("http://api.zippopotam.us/us/" + "10011").get());
-        System.out.println(new ServiceCommunicator("https://itunes.apple.com/search?term=" + "bbking" + "\\&limit=1").get());
+        System.out.println(new ServiceCommunicator("https://itunes.apple.com/search?term=" + "booking" + "\\&limit=1").get());
         System.err.println("==================================");
         System.out.println(new ServiceCommunicator("http://www.google.com").get());
       }
