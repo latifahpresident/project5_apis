@@ -17,12 +17,13 @@ public class ServiceCommunicator {
  Constructor - supply the target URL and try to make the connection
  */
     public ServiceCommunicator(String serviceURL) {
+
             try {
                 URL url = new URL(serviceURL);
                 URLConnection urlConnection = url.openConnection();
                 conn = (HttpURLConnection)urlConnection;
             } catch(Exception ex) {
-                System.err.println("**Error in constructor - Cannot create the URL or make the connection.");
+                System.err.println("**Error in constructor - Cannot create the URL or make the connection. ");
                 System.exit(1);
             }
     }
@@ -49,9 +50,9 @@ public class ServiceCommunicator {
  main method used just to test this class in isolation.  You will learn more about testing in another course
  */
       public static void main(String[] argv) {
-        System.out.println(new ServiceCommunicator("http://api.zippopotam.us/us/" + "10011").get());
-        System.out.println(new ServiceCommunicator("https://itunes.apple.com/search?term=" + "booking" + "\\&limit=1").get());
-        System.err.println("==================================");
-        System.out.println(new ServiceCommunicator("http://www.google.com").get());
+//        System.out.println(new ServiceCommunicator("http://api.zippopotam.us/us/" + "10011").get());
+//        System.out.println(new ServiceCommunicator("https://itunes.apple.com/search?term=" + "booking" + "\\&limit=1").get());
+//        System.err.println("==================================");
+//        System.out.println(new ServiceCommunicator("http://www.google.com").get());
       }
 }
