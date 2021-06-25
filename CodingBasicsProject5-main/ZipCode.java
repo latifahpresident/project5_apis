@@ -1,6 +1,6 @@
 public class ZipCode extends ServiceCommunicator {
-    private static String serviceURL = "http://api.zippopotam.us/us/";
-    private static String zipcode;
+   static String serviceURL = "http://api.zippopotam.us/us/";
+    String zipcode;
 
     public ZipCode(String serviceURL, String zipcode) {
         super(serviceURL + zipcode);
