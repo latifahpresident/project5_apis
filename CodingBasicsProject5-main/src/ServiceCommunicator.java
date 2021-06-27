@@ -1,3 +1,5 @@
+import com.fasterxml.jackson.core.JsonProcessingException;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -49,7 +51,7 @@ public class ServiceCommunicator {
     /*
      main method used just to test this class in isolation.  You will learn more about testing in another course
      */
-    public static void main(String[] argv) {
+    public static void main(String[] argv) throws JsonProcessingException, IOException {
 //        System.out.println(new ServiceCommunicator("http://api.zippopotam.us/us/" + "10011").get());
 //        System.out.println(new ServiceCommunicator("https://itunes.apple.com/search?term=" + "booking" + "\\&limit=1").get());
 //        System.err.println("==================================");
